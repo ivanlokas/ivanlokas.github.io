@@ -1,6 +1,12 @@
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    min-height: 100%;
 }
 
 a {
@@ -91,6 +97,12 @@ h6 {
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
 }
 
 #hero {
@@ -102,6 +114,7 @@ h6 {
     background-size: cover;
     display: flex;
     align-items: center;
+    overflow: visible;
 }
 
 #hero:before {
@@ -300,9 +313,16 @@ h6 {
 }
 
 @media (max-width: 768px) {
+    #hero {
+        min-height: auto;
+        padding-top: 24px;
+        padding-bottom: 56px;
+        align-items: flex-start;
+    }
+
     #hero .container {
         padding-top: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 40px;
     }
 
     #hero h1 {
@@ -349,6 +369,40 @@ h6 {
     #hero .icon-box .icon {
         font-size: 30px;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-height: 700px) {
+    #hero {
+        min-height: auto;
+        padding-top: 24px;
+        padding-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    #hero .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #hero .icon-boxes {
+        margin-top: 12px;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width: 768px) and (max-height: 700px) {
+    #hero .container {
+        padding-bottom: 48px;
+    }
+
+    .scroll-indicator {
+        bottom: 16px;
     }
 }
 
