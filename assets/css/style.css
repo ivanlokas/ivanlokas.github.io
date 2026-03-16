@@ -241,6 +241,10 @@ h6 {
     color: #2487ce;
 }
 
+#hero a {
+    color: #124265;
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 24px;
@@ -457,15 +461,6 @@ h6 {
 @media (max-width: 768px) {
     #stats {
         padding: 40px 0;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem 0;
-    }
-
-    .stat-item + .stat-item {
-        border-left: none;
     }
 
     .stat-item:nth-child(even) {
