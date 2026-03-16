@@ -94,10 +94,6 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
-    [data-aos-delay] {
-        transition-delay: 0 !important;
-    }
-
     [data-aos] {
         opacity: 1 !important;
         transform: none !important;
@@ -108,7 +104,6 @@ h6 {
 #hero {
     width: 100%;
     min-height: 100vh;
-    min-height: 100dvh;
     position: relative;
     background: url("../img/hero-bg.jpg") top center;
     background-size: cover;
@@ -422,7 +417,7 @@ h6 {
 }
 
 #stats {
-    background: #f8f9fa;
+    background: #fafbfc;
     border-top: 1px solid rgba(18, 66, 101, 0.08);
     border-bottom: 1px solid rgba(18, 66, 101, 0.08);
     padding: 56px 0;
@@ -432,14 +427,21 @@ h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     text-align: center;
+    gap: 0 1px;
+    background-color: rgba(18, 66, 101, 0.1);
 }
 
 .stat-item {
-    padding: 0 1.5rem;
+    background: #fafbfc;
+    transition: transform 0.2s ease-in-out;
 }
 
-.stat-item + .stat-item {
-    border-left: 1px solid rgba(18, 66, 101, 0.1);
+.stat-inner {
+    transition: transform 0.2s ease-in-out;
+}
+
+.stat-item:hover .stat-inner {
+    transform: scale(1.08);
 }
 
 .stat-number {
@@ -493,8 +495,7 @@ h6 {
 
 @media (max-width: 768px) {
     .footer {
-        padding: 56px 0 64px;
-        padding-bottom: max(64px, env(safe-area-inset-bottom));
+        padding: 56px 0 max(64px, env(safe-area-inset-bottom));
     }
 
     .footer .footer-title {
